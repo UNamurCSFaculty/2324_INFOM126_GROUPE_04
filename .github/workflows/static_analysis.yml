@@ -23,7 +23,8 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Run Pylint
+    - name: Run Pylint with Django support
       run: |
         pip install pylint
-        pylint $(git ls-files '*.py')
+        pip install pylint-django
+        pylint --load-plugins pylint_django $(git ls-files '*.py')

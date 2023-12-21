@@ -10,6 +10,7 @@ def guestbook(request):
     else:
         form = GuestbookEntryForm()
     entries = GuestbookEntry.objects.all().order_by('-date_posted')
+    print(entries)
     return render(request, 'index.html', {'form': form, 'entries': entries})
 
 

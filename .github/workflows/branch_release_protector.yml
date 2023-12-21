@@ -1,0 +1,25 @@
+name: Branch Release Protector
+
+on:
+  create:
+    branches:
+      - '**release**'
+
+jobs:
+  protect-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Protect branch
+        uses: peter-evans/branch-protection-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          enforce_admins: true
+          required_pull_request_reviews: true
+          required_status_checks: true
+          required_linear_history: true
+          restrictions: []

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Livre d'Or</title>
+</head>
+<body>
+    <h1>Livre d'Or</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Poster</button>
+    </form>
+    <hr>
+    <h2>Messages:</h2>
+    {% for entry in entries %}
+        <p><strong>{{ entry.name }}</strong> ({{ entry.date_posted }}):</p>
+        <p>{{ entry.message }}</p>
+    {% empty %}
+        <p>Aucun message pour le moment.</p>
+    {% endfor %}
+</body>
+</html>

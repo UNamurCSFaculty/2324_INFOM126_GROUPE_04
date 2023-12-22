@@ -1,3 +1,4 @@
+"""This module contains utility functions for guestbook app"""
 def is_name_valid(name: str) -> bool:
 	""" Checks if name is valid. Valid names are non-empty strings with length <= 100"""
 	return len(name) > 0 and len(name) <= 100

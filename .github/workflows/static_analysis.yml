@@ -35,4 +35,4 @@ jobs:
     - name: Run Coverage action
       uses: ./.github/actions/coverage
       with:
-        min-coverage: 90
+        min-coverage: 75

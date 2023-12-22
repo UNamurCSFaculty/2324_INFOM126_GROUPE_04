@@ -4,10 +4,13 @@ runs:
   steps:
     - name: Install coverage
       run: pip install coverage
+      shell: bash
       
     - name: Run coverage
       run: coverage run source='.' ./mysite/manage.py test mysite
+      shell: bash
       
     - name: Generate coverage report
       run: coverage report
+      shell: bash
   

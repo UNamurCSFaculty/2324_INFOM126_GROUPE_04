@@ -1,4 +1,4 @@
-name: Python Linting
+name: Static Analysis
 
 on:
   push:
@@ -28,3 +28,6 @@ jobs:
         pip install pylint
         pip install pylint-django
         pylint --load-plugins pylint_django $(git ls-files '*.py')
+      
+    - name: Run Coverage action
+      uses: ./.github/actions/coverage

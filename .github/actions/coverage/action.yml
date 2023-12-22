@@ -1,0 +1,13 @@
+name: 'Coverage'
+description: 'Run coverage on the Django codebase'
+runs:
+  steps:
+    - name: Install coverage
+      run: pip install coverage
+      
+    - name: Run coverage
+      run: coverage run source='.' ./mysite/manage.py test mysite
+      
+    - name: Generate coverage report
+      run: coverage report
+  

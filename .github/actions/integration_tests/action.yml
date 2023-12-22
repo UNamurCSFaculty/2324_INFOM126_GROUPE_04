@@ -4,5 +4,5 @@ runs:
   using: 'composite'
   steps:
     - name: Run tests
-      run: .\mysite\manage.py test guestbook.integration_tests
+      run: ./mysite/manage.py test guestbook.integration_tests
       shell: bash

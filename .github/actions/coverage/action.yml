@@ -1,6 +1,7 @@
 name: 'Coverage'
 description: 'Run coverage on the Django codebase'
 runs:
+  using: 'composite'
   steps:
     - name: Install coverage
       run: pip install coverage

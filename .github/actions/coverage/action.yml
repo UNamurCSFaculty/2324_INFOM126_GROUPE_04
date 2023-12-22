@@ -13,7 +13,7 @@ runs:
       shell: bash
       
     - name: Run coverage
-      run: coverage run --source='.' --branch ./mysite/manage.py test mysite
+      run: coverage run --source='.' --branch ./mysite/manage.py test guestbook.tests
       shell: bash
       
     - name: Generate coverage report

@@ -30,6 +30,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Test print
-      run: echo "Hello world"
-      shell: bash
+    - name: Run Integration Tests
+      uses: ./.github/actions/integration_tests

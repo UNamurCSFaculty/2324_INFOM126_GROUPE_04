@@ -28,7 +28,9 @@ jobs:
         pip install pylint
         pip install pylint-django
         pylint --load-plugins pylint_django $(git ls-files '*.py')
+
+    - name: Check out repository code
+      uses: actions/checkout@v3
       
     - name: Run Coverage action
-      uses: actions/checkout@v3
       uses: ./.github/actions/coverage

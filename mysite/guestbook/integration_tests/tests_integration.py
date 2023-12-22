@@ -5,10 +5,12 @@ from django.core.management import call_command
 from ..models import GuestbookEntry
 
 class GuestbookIntegrationTests(TestCase):
-	
+	"""Tests d'intégration pour le guestbook"""
 	def test_message_creation_and_retrieval(self):
+		"""Teste la création et la récupération d'un message"""
 		# Création d'un nouveau message
-		response = self.client.post(reverse('guestbook:create'), {'name': 'Test User', 'message': 'Hello, world!'})
+		response = self.client.post(reverse('guestbook:create'),
+							   {'name': 'Test User', 'message': 'Hello, world!'})
 		self.assertEqual(response.status_code, 302)  # Redirection attendue après la création
 
 		# Récupération du message créé
@@ -18,6 +20,7 @@ class GuestbookIntegrationTests(TestCase):
 		self.assertEqual(messages[0].message, 'Hello, world!')
 
 	def test_guestbook_page(self):
+		"""Teste l'affichage de la page du guestbook"""
 		# Accès à la page du guestbook
 		response = self.client.get(reverse('guestbook:list'))
 		self.assertEqual(response.status_code, 200)

@@ -1,6 +1,8 @@
+from typing import Any
 from django.db import models
 
 class GuestbookEntry(models.Model):
+	
 	name = models.CharField(max_length=100, unique=True)
 	message = models.TextField()
 	date_posted = models.DateTimeField(auto_now_add=True)

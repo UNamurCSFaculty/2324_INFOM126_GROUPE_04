@@ -8,7 +8,7 @@ runs:
       shell: bash
       
     - name: Run coverage
-      run: coverage run source='.' ./mysite/manage.py test mysite
+      run: coverage run --source='.' ./mysite/manage.py test mysite
       shell: bash
       
     - name: Generate coverage report

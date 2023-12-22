@@ -30,4 +30,4 @@ jobs:
         pylint --load-plugins pylint_django $(git ls-files '*.py')
       
     - name: Run Coverage action
-      uses: ./.github/actions/coverage
+      uses: ./.github/actions/coverage@v3

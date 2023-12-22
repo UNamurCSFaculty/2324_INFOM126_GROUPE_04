@@ -1,0 +1,25 @@
+name: 'Build'
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v3
+
+    - name: Compile action
+      uses: ./.github/actions/compilation
+
+    - name: Run Static Analysis action
+      uses: ./.github/actions/static_analysis
+      
+    - name: Run Coverage action
+      uses: ./.github/actions/coverage
+      with:
+        min-coverage: 75

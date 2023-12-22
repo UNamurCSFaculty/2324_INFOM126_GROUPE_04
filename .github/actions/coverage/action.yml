@@ -1,0 +1,22 @@
+name: 'Coverage'
+description: 'Run coverage on the Django codebase'
+input:
+  min-coverage:
+    description: 'Minimum coverage percentage'
+    required: true
+    default: 80
+runs:
+  using: 'composite'
+  steps:
+    - name: Install coverage
+      run: pip install coverage
+      shell: bash
+      
+    - name: Run coverage
+      run: coverage run --source='.' --branch ./mysite/manage.py test mysite
+      shell: bash
+      
+    - name: Generate coverage report
+      run: coverage report --fail-under=${{ inputs.min-coverage }}
+      shell: bash
+  

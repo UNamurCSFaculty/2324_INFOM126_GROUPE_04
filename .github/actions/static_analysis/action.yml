@@ -1,0 +1,21 @@
+#
+# Minimum score is defined in .pylintrc file
+#
+
+name: 'Static Analysis'
+description: 'Run static analysis on the Django codebase'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install pylint
+      run: pip install pylint
+      shell: bash
+      
+    - name: Install Django plugin
+      run: pip install pylint-django
+      shell: bash
+      
+    - name: Run Static Analysis
+      run: pylint --load-plugins pylint_django $(git ls-files '*.py')
+      shell: bash
+  

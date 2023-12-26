@@ -1,0 +1,8 @@
+name: 'Intergation Tests'
+description: 'Run integration tests on the Django codebase'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run tests
+      run: python ./mysite/manage.py test guestbook.integration_tests
+      shell: bash

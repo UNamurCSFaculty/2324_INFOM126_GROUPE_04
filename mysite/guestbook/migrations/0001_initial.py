@@ -5,19 +5,23 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    initial = True
+	initial = True
 
-    dependencies = [
-    ]
+	dependencies = [
+	]
 
-    operations = [
-        migrations.CreateModel(
-            name='GuestbookEntry',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('message', models.TextField()),
-                ('date_posted', models.DateTimeField(auto_now_add=True)),
-            ],
-        ),
-    ]
+	operations = [
+		migrations.CreateModel(
+			name='GuestbookEntry',
+			fields=[
+				('id', models.BigAutoField(
+					auto_created=True,
+					primary_key=True,
+					serialize=False,
+					verbose_name='ID')),
+				('name', models.CharField(max_length=100)),
+				('message', models.TextField()),
+				('date_posted', models.DateTimeField(auto_now_add=True)),
+			],
+		),
+	]

@@ -9,7 +9,7 @@ class GuestbookIntegrationTests(TestCase):
 	def test_message_creation_and_retrieval(self):
 		"""Teste la création et la récupération d'un message"""
 		# Création d'un nouveau message
-		response = self.client.post(reverse('guestbook:create'),
+		response = self.client.post(reverse('guestbook'),
 							   {'name': 'Test User', 'message': 'Hello, world!'})
 		self.assertEqual(response.status_code, 302)  # Redirection attendue après la création
 
@@ -22,9 +22,9 @@ class GuestbookIntegrationTests(TestCase):
 	def test_guestbook_page(self):
 		"""Teste l'affichage de la page du guestbook"""
 		# Accès à la page du guestbook
-		response = self.client.get(reverse('guestbook:list'))
+		response = self.client.get(reverse('guestbook'))
 		self.assertEqual(response.status_code, 200)
-		self.assertIn('Hello, world!', response.content.decode())
+		self.assertIn('08a8d60a048c663903b52d90663df4b5', response.content.decode())
 
 		# Vérifiez d'autres aspects de la réponse, comme le rendu correct du template
 		

@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.urls import reverse
-from django.core.management import call_command
 
 from ..models import GuestbookEntry
 

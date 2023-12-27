@@ -1,13 +1,12 @@
 name: Load Testing Action
-on:
-  pull_request:
-    branches:
-      - "release**"
+description: 'Run load tests on the Django codebase'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install locust
+      run: pip install locust
+      shell: bash
 
-jobs:
-  load_test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Run locust
+      run: locust -f locustfile.py --host https://dev.guestbook.com
+      shell: bash

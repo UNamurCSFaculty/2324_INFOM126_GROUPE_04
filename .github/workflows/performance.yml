@@ -1,0 +1,19 @@
+name: Performance Test
+on:
+  push:
+    branches:
+      - "never-no-dev-serve-to-test-with"
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Compile action
+        uses: ./.github/actions/compilation
+
+      - name: Run performance tests
+        uses: ./.github/actions/load_tests

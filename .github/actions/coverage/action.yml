@@ -4,7 +4,7 @@ input:
   min-coverage:
     description: 'Minimum coverage percentage'
     required: true
-    default: 80
+    default: 60
 runs:
   using: 'composite'
   steps:

@@ -7,8 +7,8 @@ Welcome to the Guestbook project! This project is an interactive platform where 
 ## Resources
 
 - [Setup Guide](.github/SETUP_GUIDE.md): Instructions for setting up the project locally.
-- [Contributing Guide](.github/CONTRIBUTING.md): Guidelines on how to contribute to the Guestbook project.
-- [Code of Conduct](.github/SIMPLE_CODE_OF_CONDUCT.md): Our commitment to provide a harassment-free experience for everyone.
+- [Contributing Guide](.github/CONTRIBUTOR.md): Guidelines on how to contribute to the Guestbook project.
+- [Code of Conduct](.github/CODE_OF_CONDUCT.md): Our commitment to provide a harassment-free experience for everyone.
 - [Bug Report Template](.github/BUG_REPORT_TEMPLATE.md): Template for reporting bugs in the project.
 - [Feature Request Template](.github/FEATURE_REQUEST_TEMPLATE.md): Template for proposing new features.
 

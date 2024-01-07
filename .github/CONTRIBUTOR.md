@@ -20,10 +20,10 @@ Before you can make any contribution, please set up your local environment and g
 ## Reporting Bugs
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/UNamurCSFaculty/2324_INFOM126_GROUPE_04/issues/new); it's that easy!
 
-Before you file a bug report, please check to make sure it hasn't already been reported. When you are creating a bug report, please include as many details as possible. Fill out the [required template](.github/ISSUE_TEMPLATE/bug_report.md), the information it asks for helps us resolve issues faster.
+Before you file a bug report, please check to make sure it hasn't already been reported. When you are creating a bug report, please include as many details as possible. Fill out the [required template](BUG_REPORT_TEMPLATE.md), the information it asks for helps us resolve issues faster.
 
 ## Feature Requests
-We're always looking for suggestions to improve our project. If you have an idea for something you think would be a good addition, please open an issue using our [feature request template](.github/ISSUE_TEMPLATE/feature_request.md) to let us know.
+We're always looking for suggestions to improve our project. If you have an idea for something you think would be a good addition, please open an issue using our [feature request template](FEATURE_REQUEST_TEMPLATE.md) to let us know.
 
 ## Pull Requests
 Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:
